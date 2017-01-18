@@ -1,0 +1,38 @@
+
+<div class="page-header">
+ 
+<h1> Add Book Details </h1>
+</div>
+
+<div style="margin:50px">
+<form name="FormData" novalidate ng-submit="Details.$valid && login.submit()">
+<div class="form-group">
+<label > Title </label>
+
+    <input name="title" style="width:50%" type="text" class="form-control" ng-model=book.title placeholder="Title" required>
+
+<span ng-show="FormData.title.$touched && FormData.title.$invalid">Title Cant be empty</span>
+</div>
+
+
+<div class="form-group">
+
+  <label>Year</label>
+
+  <input name="year" style="width:50%" type="number" class="form-control" ng-model=book.year placeholder="Year" required>
+
+<span ng-show="FormData.year.$touched && FormData.year.$invalid">Year Cant be Empty.</span>
+</div>
+
+<div class="checkbox">
+
+  <label>
+      
+      <input type="checkbox" ng-model=book.favorite> Favorite
+    </label>
+</div>
+<button type="submit" ng-disabled="Details.$invalid" ng-click="addBook()" class=" btn btn-primary" class="btn btn-success"><a href="#Display">AddBook</a></button>
+
+</form>
+
+</div>
